@@ -352,6 +352,7 @@ open class SideMenuController: UIViewController {
         if SideMenuController.preferences.animation.shouldAddBlurWhenRevealing {
             let blurEffect = UIBlurEffect(style: .light)
             overlay = UIVisualEffectView(effect: blurEffect)
+            overlay.frame = contentContainerView.bounds
         } else {
             overlay = UIView(frame: contentContainerView.bounds)
         }
